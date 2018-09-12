@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\Debug\ExternalTools\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -32,18 +32,28 @@
   <ItemGroup>
     <Reference Include="BizHawk.Client.ApiHawk">
       <HintPath>..\..\HawkAutoGaming\BizHawk\output\BizHawk.Client.ApiHawk.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="BizHawk.Client.Common">
       <HintPath>..\..\HawkAutoGaming\BizHawk\output\BizHawk.Client.Common.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="BizHawk.Common">
       <HintPath>..\..\HawkAutoGaming\BizHawk\output\BizHawk.Common.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="BizHawk.Emulation.Common">
       <HintPath>..\..\HawkAutoGaming\BizHawk\output\BizHawk.Emulation.Common.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="BizHawk.Emulation.Cores">
       <HintPath>..\..\HawkAutoGaming\BizHawk\output\BizHawk.Emulation.Cores.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MachineGamingEngine, Version=1.0.6829.38854, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug\dll\MachineGamingEngine.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,7 +68,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Presentation\CustomMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
