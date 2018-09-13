@@ -5,6 +5,7 @@ using System.IO;
 using System.Windows.Forms;
 using MachineGamingEngine;
 using System.Reflection;
+using BizHawkExternalTool.Data;
 
 [assembly: BizHawkExternalTool("Machine Gaming Toolset", "Tools to assist with setting up machine learning for videogaming")]
 namespace BizHawk.Client.EmuHawk
@@ -17,8 +18,9 @@ namespace BizHawk.Client.EmuHawk
         [RequiredService]
         private IEmulator Emulator { get; set; }
 
-        private int _currentFrame { get; set; }
-        private bool _currentlyUpdating { get; set; }
+        private int _currentFrame;
+        private bool _currentlyUpdating;
+        private InputCollector _inputCollector;
 
         public CustomMainForm()
         {
@@ -47,6 +49,7 @@ namespace BizHawk.Client.EmuHawk
         public void Restart()
         {
             //Stage Inputs
+            _inputCollector = new InputCollector(MemoryDomains, Emulator);
         }
 
         public void UpdateValues()
@@ -70,6 +73,7 @@ namespace BizHawk.Client.EmuHawk
             if ((_currentFrame % 5) == 0)
             {
                 //Refesh Inputs
+                _inputCollector.RefreshInputs();
 
                 //Send Output
             }

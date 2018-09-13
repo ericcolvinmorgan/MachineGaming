@@ -68,6 +68,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\InputCollector.cs" />
+    <Compile Include="Data\MemoryBase.cs" />
     <Compile Include="Presentation\CustomMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,5 +83,6 @@
       <DependentUpon>CustomMainForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
